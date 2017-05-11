@@ -3,7 +3,7 @@
 NODES=$(echo node0{2..5})
 
 sudo hostname master
-sudo echo master > /etc/hostname
+echo master | sudo tee /etc/hostname
 
 for i in $NODES
 do

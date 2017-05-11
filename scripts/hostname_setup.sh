@@ -7,6 +7,6 @@ sudo echo master > /etc/hostname
 
 for i in $NODES
 do
-	sudo ssh hostname $i 
-	sudo ssh echo $i > /etc/hostname
+	sudo ssh $i hostname $i 
+	sudo ssh $i echo $i > /etc/hostname
 done

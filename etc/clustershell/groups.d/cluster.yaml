@@ -1,0 +1,4 @@
+roles:
+    master: 'node01'
+    compute: 'node0[2-5]'
+    all: '@master,@compute'

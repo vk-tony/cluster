@@ -8,7 +8,7 @@
 
 set MY_NAME="/apps/opt/lmod/lmod/init/cshrc"
 
-
+if ( `id -u` >= 1000 ) then
 
 if ( ! $?MODULEPATH_ROOT ) then
     if ( $?USER) then
@@ -34,6 +34,8 @@ endif
 
 if ( -f  /apps/opt/lmod/lmod/init/csh  ) then
   source /apps/opt/lmod/lmod/init/csh
+endif
+
 endif
 
 # Local Variables:

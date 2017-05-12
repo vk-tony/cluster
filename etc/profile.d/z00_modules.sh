@@ -6,12 +6,7 @@
 #
 ########################################################################
 
-if [ 0 -eq $EUID ]; then
-	echo "No modules for root!"
-	return
-fi
-
-if [ -z "${USER_IS_ROOT:-}" ]; then
+if [ `id -u` -ge 1000 ]; then
 
   if [ -z "${MODULEPATH_ROOT:-}" ]; then
     export USER=${USER-${LOGNAME}}  # make sure $USER is set

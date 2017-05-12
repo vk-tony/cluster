@@ -1,4 +1,4 @@
-class filesystems {
+class nfs_filesystems {
 
 	file { "/apps":
 		ensure => "directory",

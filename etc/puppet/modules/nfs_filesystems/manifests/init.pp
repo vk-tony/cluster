@@ -11,7 +11,7 @@ class filesystems {
 		device => "master:/exports/apps",
 		fstype => "nfs",
 		ensure => "mounted",
-		options => "defaults,vers=3",
+		options => "defaults,noauto",
 		atboot => true,
 	}
 
@@ -23,10 +23,10 @@ class filesystems {
 	}
 
 	mount { "/dhome":
-		device => "master:/exports/home",
+		device => "master:/exports/dhome",
 		fstype => "nfs",
 		ensure => "mounted",
-		options => "defaults",
+		options => "defaults,noauto",
 		atboot => true,
 	}
 }

@@ -14,6 +14,7 @@ class repos {
 	package {"epel-release":
 		ensure => "present",
 		source => "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm",
+		provider => "rpm",
 	}
 
 	yumrepo { "EPEL":

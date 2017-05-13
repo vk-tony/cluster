@@ -5,7 +5,7 @@ class scheduler::config inherits scheduler {
                 owner => "root",
                 group => "root",
                 mode => "0644",
-                source => "puppet:///modules/clients/pbs.conf",
+                source => "puppet:///modules/scheduler/pbs_client.conf",
         }
 
 }

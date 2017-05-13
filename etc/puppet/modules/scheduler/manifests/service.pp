@@ -1,6 +1,7 @@
 class scheduler::service inherits scheduler {
-	service { 'pbs':
-		name	=>	'pbs',
-		ensure	=>	'running',
-	}
+	#service { 'pbs':
+	#	name	=>	'pbs',
+	#	ensure	=>	'running',
+	#	enable  =>	"yes",
+	#}
 }

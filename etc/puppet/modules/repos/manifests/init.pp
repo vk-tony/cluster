@@ -17,10 +17,10 @@ class repos {
 		provider => "rpm",
 	}
 
-	yumrepo { "EPEL":
-		name => "epel",
-		enabled => "yes"
-	}
+	#yumrepo { "EPEL":
+	#	name => "epel",
+	#	enabled => "yes"
+	#}
 
 	yumrepo { "LCI-BAC":
 		name => "hpc",

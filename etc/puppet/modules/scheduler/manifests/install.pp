@@ -4,7 +4,8 @@ class scheduler::install inherits scheduler {
 
 	# A list of dependencies for our compute nodes to run PBS Pro (...and Lmod)
 	$pkgs = [ 
-		'bash-completion','vim',
+		'bash-completion',
+		'vim-enhanced',
           	'readline', 'readline-devel',
           	'libgenders', 'libgenders-devel',
           	'lua','lua-devel', 'lua-lpeg', 'lua-filesystem', 'lua-posix', 'lua-json', 'lua-term',

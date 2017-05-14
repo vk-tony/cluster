@@ -19,7 +19,7 @@ class scheduler::install inherits scheduler {
           	'wget','curl','libcurl',
           	'gcc','gcc-gfortran','gcc-c++','make','autoconf','automake',
           	'libX11-devel','libXext','libXt-devel','libXft-devel',
-          	'libedit-devel','ncurses-devel',
+          	'ncurses-devel',
           	'perl',
           	'postgresql-server','postgresql-devel',
           	'expat','expat-devel',

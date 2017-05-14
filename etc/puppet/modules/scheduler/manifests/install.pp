@@ -14,7 +14,6 @@ class scheduler::install inherits scheduler {
           	'libical', 'libical-devel',
           	'rpm-build',
           	'hwloc', 'hwloc-devel',
-          	'libXt-devel',
           	'libedit-devel',
           	'python','python-devel',
           	'wget','curl','libcurl',

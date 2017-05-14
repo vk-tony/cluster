@@ -18,7 +18,7 @@ class scheduler::install inherits scheduler {
           	'libedit-devel',
           	'python','python-devel',
           	'wget','curl','libcurl',
-          	'gcc','gcc-gfortran','gcc-c++','make','autoconf','automake'
+          	'gcc','gcc-gfortran','gcc-c++','make','autoconf','automake',
           	'libX11-devel','libXext','libXt-devel','libXft-devel',
           	'libedit-devel','ncurses-devel',
           	'perl',

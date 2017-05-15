@@ -39,29 +39,39 @@ cd /var/www/html/hpc-repo
 sudo createrepo $(pwd)
 
 # Update the YUM cache on all nodes
-# sudo clush -w @compute yum makecache fast
+sudo clush -w @all yum makecache fast
 
 # Install the PBS Pro Server on master node
-# sudo yum install pbspro-server
+sudo yum install pbspro-server
 
 # Install the PBS Pro Execution package on compute nodes
-# (This should be done in Puppet technically)
+# (This should be done with configuration management technically)
 # sudo clush -w @compute yum install -y pbspro-execution
 
+
 # Edit the /etc/pbs.conf for master server
+
 
 # Edit the /etc/pbs.conf for compute nodes
 
 # Start the PBS server on the master
+sudo systemctl start pbs
 
 # Add the compute nodes to the server configuration
-
+NODES=$(cluset -e @compute)
+for i in $NODES
+do
+	sudo qmgr -c "c n $i"
+done
 # Start the PBS MOMs on the compute nodes
+sudo clush -bw @compute systemctl start pbs
+
+# Verify nodes are up and running with PBS
+/opt/pbs/bin/pbsnodes -l | grep state | sort | uniq -c 
 
 # Make some optimizations about shared filesystems
+# See /var/spool/pbs/mom_priv/config
 
 # Next -> Build OpenMPI
-
-
 
 

@@ -26,7 +26,7 @@ LIBS="-lpbs -lpthread -lcrypto" \
 	--with-tm=/opt/pbs
 
 make -j 2
-make install
+sudo make install
 
 cd ..
 

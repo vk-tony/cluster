@@ -10,4 +10,4 @@ sudo clush -w @compute systemctl start puppet
 
 sudo puppet cert list
 
-sudo pupet cert sign --all
+sudo puppet cert sign --all

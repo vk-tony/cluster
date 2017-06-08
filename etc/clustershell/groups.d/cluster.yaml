@@ -1,4 +1,4 @@
 roles:
-    master: 'node01'
-    compute: 'node0[2-5]'
+    master: 'victor@10.0.2.4'
+    compute: 'victor@10.0.2.[5-8]'
     all: '@master,@compute'

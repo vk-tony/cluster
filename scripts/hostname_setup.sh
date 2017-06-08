@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NODES=$(echo node0{2..5})
+NODES=$(echo victor@10.0.2.{4..8})
 
 sudo hostname master
 echo master | sudo tee /etc/hostname
